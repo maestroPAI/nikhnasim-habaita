@@ -1,0 +1,10 @@
+{
+  "name": "nikhnasim-habaita",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "npx serve ."
+  },
+  "description": "Frontend RTL לניהול מעבר לבית, מחובר ל-Base44 הקיים",
+  "license": "UNLICENSED"
+}
