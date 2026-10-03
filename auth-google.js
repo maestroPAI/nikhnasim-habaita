@@ -12,11 +12,12 @@ function addGoogleButton() {
   btn.type = 'button';
   btn.innerHTML = '<span style="font-weight:700;font-size:18px">G</span><span>המשך עם Google</span>';
   btn.style.cssText = 'width:100%;display:flex;align-items:center;justify-content:center;gap:10px;margin:14px 0 8px;padding:13px 16px;border:1px solid #ddd;border-radius:12px;background:#fff;color:#202124;font:inherit;font-weight:600;cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.06)';
-  btn.addEventListener('click', async () => {
+  btn.addEventListener('click', () => {
     btn.disabled = true;
     btn.textContent = 'מעביר ל-Google…';
+    const returnUrl = `${window.location.origin}${window.location.pathname}`;
     try {
-      await base44.auth.loginWithProvider('google');
+      base44.auth.loginWithProvider('google', returnUrl);
     } catch (e) {
       btn.disabled = false;
       btn.innerHTML = '<span style="font-weight:700;font-size:18px">G</span><span>המשך עם Google</span>';
