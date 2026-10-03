@@ -1,7 +1,10 @@
 import { createClient } from 'https://esm.sh/@base44/sdk';
 
 const APP_ID = '6ac0c4d39306549ee04c755b';
-const base44 = createClient({ appId: APP_ID });
+const base44 = createClient({
+  appId: APP_ID,
+  appBaseUrl: 'https://base44.app'
+});
 
 function addGoogleButton() {
   const card = document.querySelector('.login-card');
